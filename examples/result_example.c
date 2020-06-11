@@ -5,25 +5,18 @@
 #define CASE    break; case
 #define DEFAULT break; default
 
-typedef enum {
-    DIVISION_BY_ZERO,
-    INVALID_OPERATOR
-} Error;
+// to avoid '*' in name of type
+typedef char* String;
 
-char* error_message[] = {
-    "Division by zero",
-    "Invalid operator"
-};
+RESULT(int, String);
 
-RESULT(int, Error);
-
-Result(int, Error) eval(int lhs, int rhs, char op) {
+Result(int, String) eval(int lhs, int rhs, char op) {
     switch (op) {
-    CASE '+': return ok(int, Error, lhs + rhs);
-    CASE '-': return ok(int, Error, lhs - rhs);
-    CASE '*': return ok(int, Error, lhs * rhs);
-    CASE '/': return rhs ? ok(int, Error, lhs / rhs) : err(int, Error, DIVISION_BY_ZERO);
-    DEFAULT : return err(int, Error, INVALID_OPERATOR);
+    CASE '+': return ok(int, String, lhs + rhs);
+    CASE '-': return ok(int, String, lhs - rhs);
+    CASE '*': return ok(int, String, lhs * rhs);
+    CASE '/': return rhs ? ok(int, String, lhs / rhs) : err(int, String, "Division by zero");
+    DEFAULT : return err(int, String, "Invalid operator");
     }
 }
 
@@ -33,11 +26,11 @@ int main() {
 
     scanf("%d %c %d", &lhs, &op, &rhs);
 
-    Result(int, Error) answer = eval(lhs, rhs, op);
+    Result(int, String) answer = eval(lhs, rhs, op);
 
     switch (answer.tag) {
     CASE OK : printf("Ok! %d\n", answer.ok);
-    CASE ERR: printf("Error! %s\n", error_message[ answer.err ]);
+    CASE ERR: printf("Error! %s\n", answer.err);
     }
 
     return 0;
