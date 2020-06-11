@@ -28,7 +28,7 @@
         3. `err(T, U, V) -> Result(T, U)`
 2. `container`
     1. `vec.h`
-        1. @`Vec(T)`
+        1. `Vec(T)`
         2. @`vec1(T) -> Vec(T)`
         3. @`vec2(T, C, V) -> Vec(T)`
         4. @`vec_at(T, S, I) -> T`
