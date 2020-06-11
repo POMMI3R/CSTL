@@ -22,5 +22,5 @@
     7. Set
     8. Dict
     9. HashSet
-    10. HashMap
+    10. HashDict
     11. PQueue
