@@ -15,15 +15,15 @@ char* error_message[] = {
     "Invalid operator"
 };
 
-RESULT_DEF(int, Error);
+RESULT(int, Error);
 
-RESULT(int, Error) eval(int lhs, int rhs, char op) {
+Result(int, Error) eval(int lhs, int rhs, char op) {
     switch (op) {
-    CASE '+': return OK_NEW(int, Error, lhs + rhs);
-    CASE '-': return OK_NEW(int, Error, lhs - rhs);
-    CASE '*': return OK_NEW(int, Error, lhs * rhs);
-    CASE '/': return rhs ? OK_NEW(int, Error, lhs / rhs) : ERR_NEW(int, Error, DIVISION_BY_ZERO);
-    DEFAULT : return ERR_NEW(int, Error, INVALID_OPERATOR);
+    CASE '+': return ok(int, Error, lhs + rhs);
+    CASE '-': return ok(int, Error, lhs - rhs);
+    CASE '*': return ok(int, Error, lhs * rhs);
+    CASE '/': return rhs ? ok(int, Error, lhs / rhs) : err(int, Error, DIVISION_BY_ZERO);
+    DEFAULT : return err(int, Error, INVALID_OPERATOR);
     }
 }
 
@@ -33,11 +33,11 @@ int main() {
 
     scanf("%d %c %d", &lhs, &op, &rhs);
 
-    RESULT(int, Error) result = eval(lhs, rhs, op);
+    Result(int, Error) answer = eval(lhs, rhs, op);
 
-    switch (result.tag) {
-    CASE OK : printf("Ok! %d\n", result.ok);
-    CASE ERR: printf("Error! %s\n", error_message[ result.err ]);
+    switch (answer.tag) {
+    CASE OK : printf("Ok! %d\n", answer.ok);
+    CASE ERR: printf("Error! %s\n", error_message[ answer.err ]);
     }
 
     return 0;
