@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <stdarg.h>
 
-#define NUMARGS(...) (sizeof((int[]){ __VA_ARGS__ }) / sizeof(int))
+#define __NUMARGS(...) (sizeof((int[]){ __VA_ARGS__ }) / sizeof(int))
 
 #define OPTION(T)                                       \
 __STRUCT_OPTION_IMPL(T)                                 \
@@ -41,7 +41,7 @@ Option(T) __FUNC_SOME_NAME(T)(T value) {                \
     }; return ret;                                      \
 }
 
-#define option(T, ...) __FUNC_OPTION_NAME(T)(NUMARGS(__VA_ARGS__), ##__VA_ARGS__)
+#define option(T, ...) __FUNC_OPTION_NAME(T)(__NUMARGS(__VA_ARGS__), ##__VA_ARGS__)
 #define __FUNC_OPTION_NAME(T) __option_##T
 #define __FUNC_OPTION_IMPL(T)                           \
 Option(T) __FUNC_OPTION_NAME(T)(ssize_t args, ...) {    \
