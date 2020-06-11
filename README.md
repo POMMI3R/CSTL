@@ -31,7 +31,8 @@
     1. `vec.h`
         1. `Vec(T)`
         2. @`vec1(T) -> Vec(T)`
-        3. @`vec2(T, C, V) -> Vec(T)`
+        3. @`vec2(T, C) -> Vec(T)`
+        4. @`vec3(T, C, V) -> Vec(T)`
         4. $@`vec_at(T, S, I) -> T`
         5. $@`vec_back(T, S) -> T`
         6. @`vec_begin(T, S) -> T*`
