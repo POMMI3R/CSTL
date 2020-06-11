@@ -4,14 +4,14 @@
 
 1. utility
     1. Option
-        1. OPTION(T)
-        2. NONE_NEW(T)
-        3. SOME_NEW(T, V)
-        4. OPTION_NEW(T, ...)
+        1. Option(T)
+        2. none(T)
+        3. some(T, V)
+        4. option(T, ...)
     2. Result
-        1. RESULT(T, U)
-        2. OK_NEW(T, U, V)
-        3. ERR_NEW(T, U, V)
+        1. Result(T, U)
+        2. ok(T, U, V)
+        3. err(T, U, V)
 2. container
     1. Array
     2. Vec
