@@ -13,14 +13,4 @@
         2. ok(T, U, V)
         3. err(T, U, V)
 2. container
-    1. Array
-    2. Vec
-    3. List
-    4. Indexed Tree
-    5. Deque
-    6. IDeque
-    7. Set
-    8. Dict
-    9. HashSet
-    10. HashDict
-    11. PQueue
+    1. Vec
