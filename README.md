@@ -16,17 +16,17 @@
 ## 구조체, (매크로)함수 목록
 
 1. utility
-    1. Option
+    1. option.h
         1. `Option(T)`
         2. `none(T) -> Option(T)`
         3. `some(T, V) -> Option(T)`
         4. `option(T, ...) -> Option(T)`
-    2. Result
+    2. result.h
         1. `Result(T, U)`
         2. `ok(T, U, V) -> Result(T, U)`
         3. `err(T, U, V) -> Result(T, U)`
 2. container
-    1. Vec
+    1. vec.h
         1. `Vec(T)`
         2. `vec1(T) -> Vec(T)`
         3. `vec2(T, C, V) -> Vec(T)`
