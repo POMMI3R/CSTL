@@ -33,17 +33,17 @@
         2. `vec1(T) -> Vec(T)`
         3. `vec2(T, C) -> Vec(T)`
         4. `vec3(T, C, V) -> Vec(T)`
-        4. $@`vec_at(T, S, I) -> T`
+        4. $`vec_at(T, S, I) -> T`
         5. $@`vec_back(T, S) -> T`
         6. @`vec_begin(T, S) -> T*`
         7. @`vec_end(T, S) -> T*`
         8. @`vec_empty(T, S) -> bool`
-        9. @*`vec_reserve(T, S, V) -> Vec(T)`
-        10. @*`vec_shrink(T, S) -> Vec(T)`
-        11. @*`vec_resize(T, S, V) -> Vec(T)`
-        12. @*`vec_clear(T, S) -> Vec(T)`
+        9. @`vec_reserve_apply(T, S, V) -> void`
+        10. @`vec_shrink_apply(T, S) -> void`
+        11. @`vec_resize_apply(T, S, V) -> void`
+        12. @`vec_clear_apply(T, S) -> void`
         13. @*`vec_insert(T, S, I, V) -> Vec(T)`
         14. @*`vec_erase(T, S, I, V) -> Vec(T)`
         15. @*`vec_push_back(T, S, V) -> Vec(T)`
         16. $@*`vec_pop_back(T, S, V) -> Vec(T)`
-        17. @`vec_destructor(T, S) -> void`
+        17. `vec_destructor(T, S) -> void`
