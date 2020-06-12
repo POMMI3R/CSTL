@@ -45,6 +45,6 @@
         13. $@*`vec_insert(T, S, I, V) -> Vec(T)`
         14. $@*`vec_erase(T, S, I, V) -> Vec(T)`
         15. @*`vec_push_back(T, S, V) -> Vec(T)`
-        16. $@*`vec_pop_back(T, S, V) -> Vec(T)`
+        16. $@*`vec_pop_back(T, S) -> Vec(T)`
         17. @`vec_clone(T, S) -> Vec(T)`
         17. `vec_destructor(T, S) -> void`
