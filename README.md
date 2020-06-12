@@ -42,9 +42,9 @@
         10. @`vec_shrink_apply(T, S) -> void`
         11. @`vec_resize_apply(T, S, V) -> void`
         12. @`vec_clear_apply(T, S) -> void`
-        13. $@*`vec_insert(T, S, I, V) -> Vec(T)`
-        14. $@*`vec_erase(T, S, I, V) -> Vec(T)`
-        15. @*`vec_push_back(T, S, V) -> Vec(T)`
-        16. $@*`vec_pop_back(T, S) -> Vec(T)`
+        13. $@`vec_insert_apply(T, S, I, V) -> void`
+        14. $@`vec_erase(T, S, I, V) -> void`
+        15. @`vec_push_back(T, S, V) -> void`
+        16. $@`vec_pop_back(T, S) -> void`
         17. @`vec_clone(T, S) -> Vec(T)`
         17. `vec_destructor(T, S) -> void`
