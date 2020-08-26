@@ -5,7 +5,7 @@
 #define CASE    break; case
 #define DEFAULT break; default
 
-OPTION_DEF(int);
+OPTION(int);
 
 Option(int) try_division(int lhs, int rhs) {
     // return rhs ? some(int, lhs / rhs) : none(int);
